@@ -1,0 +1,19 @@
+{
+	"parser": "@typescript-eslint/parser",
+	"parserOptions": {
+		"ecmaVersion": 2020,
+		"sourceType": "module",
+		"project": "./tsconfig.json"
+	},
+	"plugins": ["@typescript-eslint", "react"],
+	"extends": ["eslint:recommended", "plugin:@typescript-eslint/recommended", "plugin:react/recommended", "prettier"],
+	"rules": {
+		"react/react-in-tsx-scope": "off", // Disable the rule for React 17+
+		"react/prop-types": "off" // Disable PropTypes rule for TypeScript
+	},
+	"settings": {
+		"react": {
+			"version": "detect" // Automatically detects the React version
+		}
+	}
+}
